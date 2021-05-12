@@ -26,8 +26,14 @@ export default function Home() {
       </Head>
 
       <Header title="Container Queries!">
-        Currently only works in <a href="https://www.google.com/chrome/canary/">Chrome Canary</a> with
-        the <a href="chrome://flags/#enable-container-queries">container queries flag</a> enabled.
+        <p>
+          Currently only works in <a href="https://www.google.com/chrome/canary/">Chrome Canary</a> with the
+          <a href="chrome://flags/#enable-container-queries">container queries flag</a> enabled.
+        </p>
+
+        <p>
+          <a href="https://github.com/Jonic/container-queries-demo">Source code on Github</a>
+        </p>
       </Header>
 
       <Main>

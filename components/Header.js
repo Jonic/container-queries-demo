@@ -7,7 +7,7 @@ const Header = ({ children, title }) => {
     <Container>
       <header className="header">
         <h1 className="header__title">{title}</h1>
-        {children && (<p className="header__description">{children}</p>)}
+        {children && (<div className="header__description">{children}</div>)}
       </header>
     </Container>
   )
