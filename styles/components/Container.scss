@@ -1,0 +1,22 @@
+.container {
+  --max-width: 1300px;
+
+  contain: layout inline-size;
+  margin: var(--spacing-3) auto;
+  max-width: var(--max-width);
+  padding-inline: var(--spacing-3);
+  width: 100%;
+
+  > h2 {
+    margin: 0 0 var(--spacing-2);
+    line-height: var(--line-height-cosy);
+    font-size: var(--font-size-u-5);
+    font-weight: var(--font-weight-regular);
+    text-align: center;
+  }
+}
+
+.container--sm { --max-width: 500px;  }
+.container--md { --max-width: 700px;  }
+.container--lg { --max-width: 900px;  }
+.container--xl { --max-width: 1100px; }

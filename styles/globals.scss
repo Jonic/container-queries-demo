@@ -1,0 +1,127 @@
+@forward './reset';
+@forward './components/Card';
+@forward './components/Container';
+@forward './components/Grid';
+@forward './components/Header';
+@forward './components/Main';
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-turquoise:   rgb(26, 188, 156);
+  --color-green:       rgb(22, 160, 133);
+  --color-emerald:     rgb(46, 204, 113);
+  --color-nephritis:   rgb(39, 174, 96);
+  --color-peter:       rgb(52, 152, 219);
+  --color-belize:      rgb(41, 128, 185);
+  --color-amethyst:    rgb(155, 89, 182);
+  --color-wisteria:    rgb(142, 68, 173);
+  --color-wet:         rgb(52, 73, 94);
+  --color-midnight:    rgb(44, 62, 80);
+  --color-sun:         rgb(241, 196, 15);
+  --color-orange:      rgb(243, 156, 18);
+  --color-carrot:      rgb(230, 126, 34);
+  --color-pumpkin:     rgb(211, 84, 0);
+  --color-alizarin:    rgb(231, 76, 60);
+  --color-pomegranate: rgb(192, 57, 43);
+  --color-clouds:      rgb(236, 240, 241);
+  --color-silver:      rgb(189, 195, 199);
+  --color-concrete:    rgb(149, 165, 166);
+  --color-asbestos:    rgb(127, 140, 141);
+
+  --border-radius-circle: 50%;
+  --border-radius-square: 0;
+  --border-radius-xs: 0.25rem;
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-xl: 2rem;
+
+  --font-family-sans-serif: 'Roboto', sans-serif;
+  --font-family-serif:      'Roboto', serif;
+  --font-family-monospace:  'Space Mono', monospace;
+
+  --font-size-u-8:  4.3rem;
+  --font-size-u-7:  3.583rem;
+  --font-size-u-6:  2.986rem;
+  --font-size-u-5:  2.488rem;
+  --font-size-u-4:  2.074rem;
+  --font-size-u-3:  1.728rem;
+  --font-size-u-2:  1.44rem;
+  --font-size-u-1:  1.2rem;
+  --font-size-base: 1rem;
+  --font-size-d-1:  0.833rem;
+  --font-size-d-2:  0.694rem;
+  --font-size-d-3:  0.579rem;
+
+  --font-weight-light:   300;
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+
+  --line-height-loose:   1.6;
+  --line-height-regular: 1.4;
+  --line-height-cosy:    1.2;
+  --line-height-tight:   1.1;
+
+  --spacing-1:  calc(1rem * 0.625);
+  --spacing-2:  calc(2rem * 0.625);
+  --spacing-3:  calc(3rem * 0.625);
+  --spacing-4:  calc(4rem * 0.625);
+  --spacing-5:  calc(5rem * 0.625);
+  --spacing-6:  calc(6rem * 0.625);
+  --spacing-7:  calc(7rem * 0.625);
+  --spacing-8:  calc(8rem * 0.625);
+  --spacing-9:  calc(9rem * 0.625);
+  --spacing-10: calc(9rem * 0.625);
+}
+
+html {
+  font-size: 1em;
+  font-size: clamp(1em, 2vmin, 1.2em);
+}
+
+body {
+  background-color: var(--color-clouds);
+  color: var(--color-midnight);
+  font-family: var(--font-family-sans-serif);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-regular);
+}
+
+a:not([class]) {
+  // Setup tokens
+  --color-text-base:    var(--color-peter);
+  --color-text-active:  var(--color-pomegranite);
+  --color-text-visited: var(--color-belize);
+
+  // Setup custom properties
+  --color-text: var(--color-text-base);
+
+  // Define rules
+  color: var(--color-text);
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  transition: none;
+
+  // Define pseudo-classes
+  &:visited {
+    --color-text: var(--color-text-visited);
+  }
+
+  &:focus, &:hover, &:active {
+    --color-text: var(--color-text-active);
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

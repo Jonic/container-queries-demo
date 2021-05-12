@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  line-height: var(--line-height-cosy);
+  font-size: var(--font-size-u-8);
+  font-weight: var(--font-weight-bold);
+}
+
+.header__description {
+  font-size: var(--font-size-u-2);
+}

@@ -1,0 +1,16 @@
+.grid {
+  --grid-auto-columns: 1;
+
+  display: grid;
+  gap: var(--spacing-2);
+  grid-template-columns: repeat(var(--grid-auto-columns), 1fr);
+  grid-template-rows: auto;
+}
+
+.grid__cell {
+  contain: layout inline-size;
+}
+
+@container (min-width: 500px)  { .grid { --grid-auto-columns: 2; } }
+@container (min-width: 800px)  { .grid { --grid-auto-columns: 3; } }
+@container (min-width: 1100px) { .grid { --grid-auto-columns: 4; } }
